@@ -190,7 +190,7 @@
 
         // Updated Module Content with Team Roster & Pictures
         const moduleContent = {
-            'VULINDLELA Leadership': `
+            'Group VULINDLELA Leadership': `
                 <div class="mb-4 text-center">
                     <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded-full uppercase">Working Group Leadership</span>
                     <h4 class="text-lg font-bold text-slate-800 mt-2">Group VULINDLELA</h4>
@@ -287,6 +287,8 @@
             document.getElementById('modal-title').innerText = title;
             document.getElementById('modal-body').innerHTML = moduleContent[title] || '<p class="text-slate-500 text-sm">Loading...</p>';
             document.getElementById('module-modal').classList.remove('translate-y-full');
+            
+            // Re-render Lucide icons inserted via innerHTML
             lucide.createIcons();
         }
 
